@@ -16,17 +16,17 @@
         
     // }
     const changeText = () => {
-        document.querySelector('h1').innerHTML = "Javascript is best lamguage"
+        document.querySelector('h1').innerHTML = "Javascript is best language"
     }
-
+    let intervalID;
     document.querySelector('#start').addEventListener('click', () => {
-       setInterval(changeText, 1000)
+        intervalID = setInterval(changeText, 1000)
         console.log("started");
         
     })
     
     document.querySelector('#stop').addEventListener('click', function(){
-        clearInterval(changeMe)
+        clearInterval(intervalID)
         console.log("stooped");
         
     })
